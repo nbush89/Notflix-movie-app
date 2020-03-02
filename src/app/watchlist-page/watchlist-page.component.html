@@ -1,0 +1,19 @@
+<app-header></app-header>
+<p class="nothing" *ngIf="favorites.length === 0">Nothing in Favorites!</p>
+<div class="container">
+  <div class="watchlist" *ngFor="let movie of favorites; index as i">
+    <h1>{{ movie.title }}</h1>
+    <img
+      src="https://image.tmdb.org/t/p/w1280{{ movie.poster_path }}"
+      alt="movie-pic"
+    />
+    <button class="trash" (click)="removeFav(i)">
+      <i class="fas fa-trash-alt"></i>
+    </button>
+    <div class="overview">
+      <p class="headLine">Rating-{{ movie.vote_average }}</p>
+      <p class="headLine">Movie Overview</p>
+      <p>{{ movie.overview }}</p>
+    </div>
+  </div>
+</div>

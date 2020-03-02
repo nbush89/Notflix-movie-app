@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div>
+  <h2>Search by:</h2>
+  <form #titleForm="ngForm" (ngSubmit)="findMovieByTitle(titleForm)">
+    <label for="title">Movie title</label>
+    <input type="text" name="title" id="title" ngModel />
+    <button>Find Movie By Title</button>
+  </form>
+  <form #addForm="ngForm" (ngSubmit)="searchMovies(addForm)">
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre" ngModel>
+      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
+        genre.name
+      }}</option>
+    </select>
+    <label for="rating">Rating</label>
+    <input
+      type="number"
+      name="rating"
+      id="rating"
+      placeholder="Enter 0-9"
+      min="0"
+      max="9"
+      ngModel
+    />
+    <label for="year">Year Released</label>
+    <input type="number" name="year" id="year" ngModel />
+    <button>Find Movies</button>
+  </form>
+</div>
+<app-movie-list [movieList]="movies"></app-movie-list>

@@ -1,0 +1,42 @@
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+h2 {
+  display: flex;
+  color: white;
+  align-self: center;
+}
+form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+select {
+  display: flex;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 50%;
+}
+input {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+button {
+  display: flex;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  color: lightgreen;
+  background-color: lightslategray;
+}
